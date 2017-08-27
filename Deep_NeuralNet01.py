@@ -24,7 +24,7 @@ def forward(network, x):
     a2 = np.dot(z1, W2) + B2
     z2 = af.sigmoid(a2)
     a3 = np.dot(z2, W3) + B3
-    y  = af.identity(a3)
+    y  = af.softmax(a3)
 
     return y
 
